@@ -7,7 +7,7 @@ export const handleDownload = async (url, setLoading, showToast, setUrl) => {
     setLoading(true);
 
     try {
-        const response = await fetch('https://youdownload-ws.onrender.com/download', {
+        const response = await fetch('https://youdownload-ws.onrender.com:3000/download', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ url }),
